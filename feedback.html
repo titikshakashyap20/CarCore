@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kickass Feedback Page</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Syne:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="feedback-page">
+  <br><br><br><br>
+  <div class="feedback-container">   
+    <h1 class="title">We Value Your Feedback!</h1>
+    <form id="feedback-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      
+      <label for="rating">Rate Us:</label>
+      <div class="stars" id="rating">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+      </div>
+      
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Your feedback here..." required></textarea>
+      
+      <button type="submit">Submit</button>
+    </form>
+    <div id="thank-you" class="thank-you-message" style="display: none;">
+      Thank you for your feedback!
+    </div>
+  </div>
+  <div id="feedback-display-section" class="feedback-display-section">
+    <h2>Recent Feedback:</h2>
+    <ul id="feedback-list"></ul>
+  </div>
+  
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const stars = document.querySelectorAll(".star");
+      const ratingInput = document.getElementById("rating");
+      const feedbackForm = document.getElementById("feedback-form");
+      const thankYouMessage = document.getElementById("thank-you");
+
+      let selectedRating = 0;
+
+      // Star rating functionality
+      stars.forEach((star, index) => {
+        star.addEventListener("click", () => {
+          selectedRating = index + 1;
+          updateStarDisplay(selectedRating);
+        });
+
+        star.addEventListener("mouseover", () => {
+          updateStarDisplay(index + 1);
+        });
+
+        star.addEventListener("mouseout", () => {
+          updateStarDisplay(selectedRating);
+        });
+      });
+
+      function updateStarDisplay(rating) {
+        stars.forEach((star, index) => {
+          star.style.color = index < rating ? "#FFD700" : "#808080"; // Gold color for selected stars
+        });
+      }
+
+      // Form submission functionality
+      feedbackForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        if (!selectedRating) {
+          alert("Please select a rating before submitting!");
+          return;
+        }
+
+        // Form validation
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const message = document.getElementById("message").value.trim();
+
+        if (!name || !email || !message) {
+          alert("All fields are required!");
+          return;
+        }
+
+        // Display thank-you message
+        thankYouMessage.style.display = "block";
+
+        // Optionally, send the feedback to a server using fetch or similar method
+        console.log({
+          name,
+          email,
+          rating: selectedRating,
+          message,
+        });
+
+        // Reset form and star ratings
+        feedbackForm.reset();
+        selectedRating = 0;
+        updateStarDisplay(selectedRating);
+      });
+    });
+    const feedbackItem = document.createElement("li");
+    feedbackItem.innerHTML = `<strong>Name:</strong> ${name} <br> 
+                          <strong>Rating:</strong> ${selectedRating} <br> 
+                          <strong>Feedback:</strong> ${message}`;
+    feedbackList.prepend(feedbackItem); // Add new feedback to the top
+  </script>
+</body>
+</html>

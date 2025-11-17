@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CarCore</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:ital,wght@0,900;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,600,33.4;1,9..144,600,33.4&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/logoT.png">
+
+</head>
+<body class="home-page">
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="images/logo.jpg" alt="Car Logo" class="logo">
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="DIYadvice.html">DIY Advice</a></li>
+                <li class="dropdown"> 
+                    <a href="Categories.html">Categories</a> 
+                    <ul class="dropdown-content"> 
+                        <li><a href="engine.html">Engine</a></li> 
+                        <li><a href="brakes.html">Brakes</a></li> 
+                        <li><a href="battery.html">Battery</a></li> 
+                        <li><a href="alternator.html">Transmission</a></li> 
+                        <li><a href="fluids.html">Suspension</a></li> 
+                    </ul> 
+                </li>
+                <li><a href="quiz.html">Take a Quiz!</a></li>
+                <li><a href="aboutUs.html">About</a></li>
+                <li><a href="signup.html">Sign up</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="header"> 
+        <video id="backgroundVideo" class="background-video" autoplay muted playsinline>
+            <source src="images/headerbg.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    
+    <div class="categories">
+        <div class="heading-container">
+            <h2>POPULAR CATEGORIES</h2>
+            <p>Your guide to understanding what makes cars tick</p> 
+        </div>
+        <div class="category-row"> 
+            <div class="category">
+                <video autoplay loop muted>
+                    <source src="images/engine.mp4" type="video/mp4"> 
+                    Your browser does not support the video tag. 
+                </video> 
+                <h3><a href="engine.html">ENGINE</a></h3> 
+                <p>An engine is the heart of a car, converting fuel into power to drive the vehicle. It combines air, fuel, and spark in a series of controlled explosions to generate energy for motion.</p> 
+            </div> 
+            <div class="category"> 
+                <video autoplay loop muted>
+                    <source src="images/brakes.mp4" type="video/mp4"> 
+                    Your browser does not support the video tag. 
+                </video> 
+                <h3><a href="brakes.html">BRAKES</a></h3> 
+                <p>Brakes are essential safety components that slow down or stop a vehicle by converting kinetic energy into heat through friction, ensuring controlled and safe driving.</p> 
+            </div> 
+            <div class="category"> 
+                <video autoplay loop muted>
+                    <source src="images/battery.mp4" type="video/mp4"> 
+                    Your browser does not support the video tag. 
+                </video> 
+                <h3><a href="battery.html">BATTERY</a></h3> 
+                <p>Car batteries provide the electrical power needed to start the engine and supply energy to the vehicle's electrical systems when the engine is off.</p> 
+            </div> 
+        </div> 
+    </div>
+
+    <div id="featured-section" class="featured-section">
+        <h2>FEATURED ARTICLES</h2>
+        <div id="featured-grid"></div>
+    </div>
+      
+    
+    <section class="fourth-row">
+        <h1>TAKE A QUIZ!</h1>
+        <p>How well do you know your ride?</p>
+        <a href="quiz.html" class="quiz-link">
+            <button class="quiz-button">
+                <span>&rarr;</span>
+            </button>
+        </a>
+    </section>
+    
+    <section class="fifth-row">
+        <video autoplay muted loop class="background-video">
+            <source src="images/row5.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="about-us-text">
+            <h2>About Us</h2>
+            <p>Welcome to our site, where car enthusiasts explore blogs, <br>guides, and quizzes about cars and their internal parts. <br>Join us on this automotive journey!</p>
+            <a href="aboutUs.html" class="learn-more-button">Learn More</a>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h2>CarCore</h2>
+                <p>A blog site on everything-cars by Titiksha Kashyap</p>
+                <div class="social-icons">
+                    <a href="#"><img src="images/fb.png" alt="Facebook"></a>
+                    <a href="#"><img src="images/insta.png" alt="Instagram"></a>
+                    <a href="#"><img src="images/x.png" alt="X"></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>SUBSCRIBE TO OUR NEWSLETTER!</h3>
+                <form>
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+            <div class="footer-section">
+                <h3>CONTACT US</h3>
+                <p>📞 11-1234 5678</p>
+                <p>✉️ contact@CarCore.com</p>
+            </div>
+            <div class="footer-section">
+                <h3>FEEDBACK</h3>
+                <p>Got any suggestions for us? We always look forward to your feedback.</p>
+                <a href="feedback.html" class="learn-more-button">Learn more</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 by CarCore. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const featuredGrid = document.getElementById("featured-grid");
+            // Sample data for items
+            const items = [
+            { title: "HOW TO REPLACE AN ALTERNATOR", description: "Got a bad alternator you need to swap out? Learn all the steps to do the job right.", imgSrc: "images/blog3.jpg" },
+            { title: "CAN AN ALTERNATOR DRAIN A BATTERY", description: "Can an alternator drain your vehicle's battery? We answer this question and more on how the alternator impacts the battery in your car.", imgSrc: "images/blog4.jpg" },
+            { title: "HOW DOES A TRACTION CONTROL SYSYTEM WORK?", description: "Explore the mechanics behind traction control systems, how they enhance safety in challenging driving conditions, and tips to keep them functioning properly.", imgSrc: "images/e2.jpg" },
+            { title: "WHAT ARE GLAZED BRAKES?", description: "Glazed brakes occur when pads or rotors overheat, reducing stopping power. Discover the signs, causes, and solutions to keep your brakes in top condition.", imgSrc: "images/e3.jpg" },
+        ];
+        
+        items.forEach((item) => {
+            const itemDiv = document.createElement("div");
+            itemDiv.classList.add("featured-item");
+            
+            itemDiv.innerHTML = `
+            <img src="${item.imgSrc}" alt="${item.title}">
+            <h3>${item.title}</h3>
+            <p>${item.description}</p>`;
+            
+            featuredGrid.appendChild(itemDiv);
+        });
+    });
+    </script>
+</body>
+</html>

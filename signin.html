@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <div class="login-left">
+            <div class="login-logo">
+                <!-- Add your logo image here -->
+                <img src="images/logoT.png" alt="Logo">
+            </div>
+            <h1>Welcome<br>Back!</h1>
+        </div>
+        <div class="login-right">
+            <h2>Login</h2>
+            <p>Welcome back! Please login to<br>your account.</p>
+            <form>
+                <div class="login-form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="email@example.com" required>
+                </div>
+                <div class="login-form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="********" required>
+                </div>
+                <div class="remember-forget">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember-me" name="remember-me" checked>
+                        <label for="remember-me">Remember Me</label>
+                    </div>
+                    <div class="forget-password">
+                        <a href="#">Forget Password?</a>
+                    </div>
+                </div>
+                <div class="login-form-group">
+                    <button type="submit">Login</button>
+                </div>
+            </form>
+            <p class="new-user">New User? <a href="signup.html">Signup</a></p>
+        </div>
+    </div>
+</body>
+</html>

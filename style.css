@@ -1,0 +1,1684 @@
+body.home-page {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background-color: rgb(56, 55, 55);
+}
+.navbar {
+    display: flex;
+    justify-content: centre;
+    align-items: centre;
+    background-color: white;
+    padding-left: 200px;
+    height: 60px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    margin-right: 160px;
+}
+
+.logo {
+    height: 36px;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin: 0;
+    padding-top: 22px;
+    margin-left: -30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-family: Montserrat;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+.nav-links a:hover {
+    color: darkblue;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+}
+
+.header .background-video { 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+} 
+
+.categories {
+    text-align: center;
+    padding: 50px 0;
+    background-color: rgb(247, 246, 248);
+}
+.heading-container {
+    display: inline-block; 
+    text-align: center; 
+}
+.heading-container h2,
+.heading-container p {
+  display: block;
+  margin: 0;
+}
+.heading-container h2 {
+    font-family: Gloock;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    margin-top: -10px;
+    background-color: #ffffff;
+    color: #000000;
+    padding: 2px 7px;
+}
+
+.heading-container p {
+    font-family: 'Josefin Slab', serif;
+    font-size: 1.4em;
+    margin-bottom: 40px;
+    margin-top: -5px;
+    background-color: #ffffff;
+    color: #000000; 
+}
+
+.category-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.category {
+    background-color: rgba(215, 215, 215, 0.9);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: left;
+    overflow: hidden;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.category:hover { 
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.category video {
+    width: 100%;
+    display: block; 
+    margin: 0 auto;
+}
+
+.category h3, .category p { 
+    padding: 20px; 
+}
+
+.category h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.5em;
+    margin: 10px 0;
+    padding: 10px 20px;
+    margin-top: -5px;
+}
+
+.category h3 a {
+    text-decoration: none;
+    color: #4d4d4d;
+    font-size: 1.7em;
+    margin-left: -20px;
+    font-family: 'Azeret Mono', serif;
+}
+
+.category p {
+    font-family: Nunito;
+    font-size: 1em;
+    color: #666;
+    padding: 0 20px 20px 20px;
+    line-height: 1.2;
+    margin-left: -20px;
+    margin-top: -15px;
+}
+
+.featured-section {
+    margin-top: 5px;
+    padding: 20px;
+    background-color: rgba(129, 107, 225, 0.371);
+    border-radius: 10px;
+    color: white;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .featured-section h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  #featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  .featured-item {
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    text-align: center;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .featured-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .featured-item h3 {
+    margin: 10px 0;
+    font-size: 1.5em;
+    color: #f5f4f3;
+  }
+  
+  .featured-item p {
+    font-size: 1em;
+    color: #ccc;
+}
+
+.featured-item:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+  
+
+.fourth-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh; /* Cover full viewport height */
+    background: url('images/quiz.jpg') no-repeat center center; /* Background image */
+    background-size: cover; /* Ensure the image covers the section */
+    background-color: #f9f9f9; /* Fallback background color */
+}
+
+.fourth-row h1 {
+    font-size: 3rem;
+    margin: 0;
+    color: white; /* Text color */
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional text shadow for better readability */
+}
+
+.fourth-row p {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: white; /* Text color */
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional text shadow for better readability */
+}
+
+.quiz-button {
+    background-color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.quiz-button:hover {
+    background-color: #f1f1f1;
+}
+
+.quiz-button span {
+    font-size: 1.5rem;
+}
+
+.fifth-row {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Cover full viewport height */
+    overflow: hidden; /* Ensure content stays within the row */
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire row */
+    opacity: 0.6; /* Add opacity to the video */
+    z-index: -1; /* Ensure the video stays behind the text */
+}
+
+.about-us-text {
+    position: absolute;
+    bottom: 100px; /* Adjusted upwards */
+    left: 80px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Optional text shadow for better readability */
+    text-align: left; /* Align text to the left */
+}
+
+.about-us-text h2 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+.about-us-text p {
+    font-size: 1.2rem;
+    margin: 10px 0 30px 0;
+    line-height: 1.6;
+}
+
+.learn-more-button {
+    background-color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #000;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    margin-top: 50px;
+}
+
+.learn-more-button:hover {
+    background-color: #f1f1f1;
+}
+
+footer {
+    background-color: #000;
+    padding: 20px 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px;
+}
+
+.footer-section h2, .footer-section h3 {
+    color: #fff;
+}
+
+.footer-section p {
+    color: #ccc;
+}
+
+.social-icons a {
+    margin-right: 10px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+}
+
+form {
+    display: flex;
+}
+
+form input[type="email"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    margin-bottom: 10px;
+}
+
+form button {
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px;
+    border-top: 1px solid #333;
+}
+
+.footer-bottom p {
+    color: #ccc;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+
+
+/*------------------------------------------------------------------------*/
+
+body.quiz-page {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background: url('images/quiz1.jpg') no-repeat center center fixed; ;
+    background-size: cover;
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  .quiz-container {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 50px;
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 800px;
+    height:450px;
+  }
+  
+  .quiz-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 10pxpx;
+    font-family: Playfair, Display;
+  }
+  
+  .quiz-container p {
+    font-size: 1.2em;
+    margin-bottom: 10pxpx;
+    font-family: Syne;
+  }
+  
+  .quiz-button {
+    background-color: #1f0c03;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .quiz-button:hover {
+    background-color: #2980b9;
+  }
+  
+
+/*----------------------------------------------------------------------------*/
+
+.header-box {
+    width: 100%;
+    background-image: url('images/AU.jpg'); /* Replace with your image path */
+    opacity: 0.6;
+    background-size: cover;
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
+    text-align: center;
+    padding: 70px 0 ;
+    margin-right: 0;
+    margin-left: 0;
+    background-color: #000000;
+}
+
+.header-box h1 {
+    margin: 0;
+    color: rgb(26, 25, 25); /* Adjust the text color as needed */
+    font-size: 3.3em; /* Adjust the font size as needed */
+    display: inline-block;
+    background-color: #b9b5b5;
+    padding: 5px;
+}
+
+body.about-page{
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevents horizontal scrolling */
+    width: 100%;
+}
+
+.text {
+    transform: translateY(-50%); /* Center vertically */
+    text-align: center; /* Center text */
+    color: white; /* Adjust text color */
+    font-size: 1.2em; /* Adjust font size */
+    font-weight: bold; /* Make text stand out */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.text-1,
+.text-2 {
+    opacity: 0; /* Initially hide the text */
+}
+
+.text-1{
+    width: 37%; /* Limit width */
+    position: absolute;
+    margin-top: 100px;
+    left: 18%;
+    width: 30%; /* Adjust width */
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+@font-face {
+    font-family: myFirstFont;
+    src: url(images/American\ Typewriter.ttf);
+  }
+
+.text-2{
+    width: 32%; /* Limit width */
+    position: absolute;
+    margin-top: 500px;
+    left: 45%;
+    width: 25%; /* Adjust width */
+    animation: fadeIn 2s ease-in-out 1s forwards;
+}
+
+.text p {
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent black background */
+    padding: 10px; /* Add spacing around text */
+    border-radius: 5px; /* Smooth edges */
+    margin-bottom: 20px; /* Space between paragraphs */
+    display: inline-block; /* Prevents full width */
+}
+
+/* Ensure the parent container has relative positioning */
+.content {
+    position: relative;
+}
+
+
+.images {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+}
+
+.images img {
+    height: auto; /* Keeps aspect ratio */
+}
+
+.images img:last-child {
+    max-width: 33%; /* Adjust as needed */
+    margin-right: 90px;
+    margin-top: 50px;
+}
+
+.images img:first-child {
+    height: 100vh; /* Makes the right image cover the full height */
+    width: auto; /* Maintains aspect ratio */
+    align-self: stretch; /* Ensures it stretches to container */
+    margin-top: -20px;
+    margin-left: -40px;
+}
+
+.background {
+    background: url('images/gif1.gif') no-repeat center center fixed; /* Replace with your GIF path */
+    background-size: cover;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -18px;
+}
+
+.background p {
+    text-align: center;
+    max-width: 65%;
+    margin: auto;
+    font-size: 2em;
+    color: white;
+    font-family: EB, Garamond;
+    font-style: italic;
+}
+
+/*----------------------------------------------------------*/
+
+body.signup-page {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background: url('images/signupbg.jpg') no-repeat center center;
+    background-size: cover;
+}
+
+.container{
+    display: flex; 
+    height: 100vh;
+}
+
+.left {
+    flex: 1;
+    padding: 40px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: flex-start; 
+    text-align: center;
+}
+
+.left h1 {
+    font-size: 3em;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: 250px;
+}
+
+.left-box {
+    background-color: rgba(120, 120, 120, 0.8); /* Black color with 70% opacity */
+    color: white;
+    padding: 2px 20px;
+    border-radius: 10px; /* Rounded corners */
+    max-width: 150px; /* Limit the width of the box */
+    margin: 0 auto;
+    margin-left: 0;
+    margin-top: 100px;
+    text-align: left;
+}
+
+.spacing {
+    line-height: 2;
+}
+
+.sign-in-link {
+    color: white;
+    text-decoration: underline;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(120, 120, 120, 0.8);
+    max-width: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transform: translateX(-100px);
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 20px; /* Move the section down */
+    margin-bottom: 20px;
+}
+
+.right h2 {
+    margin-bottom: 30px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 40px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.right .form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid white;
+    border-radius: 30px;
+    outline: none;
+    box-sizing: border-box;
+    background-color: rgba(120, 120, 120, 0.5);
+}
+
+.form-group button {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(252, 249, 249);
+    color: rgb(97, 96, 96);
+    border-radius: 30px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.form-group button:hover {
+    background-color: #0056b3;
+}
+
+.form-wrapper{
+    margin-top: -40px;
+}
+
+.center-text {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.social-signup {
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-signup button {
+    flex: 1;
+    margin: 0 5px;
+    padding: 10px;
+    background-color: #ddd;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.signup-wrapper {
+    margin-top: -25px; /* Adjust this value to move the elements up or down */
+    text-align: center; /* Ensure text is centered */
+}
+
+.social-signup button:hover {
+    background-color: #ccc;
+}
+
+.google-btn {
+    background-color: #db4437;
+    color: rgb(12, 12, 12);
+}
+
+.facebook-btn {
+    background-color: #3b5998;
+    color: rgb(9, 9, 9);
+}
+
+.apple-btn {
+    background-color: black;
+    color: rgb(15, 15, 15);
+}
+
+/*------------------------------------------------------------*/
+
+body.login-page {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background: url('images/bg.jpg') no-repeat center center; /* Background image */
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+    display: flex;
+    width: 60vw; /* Decreased width */
+    height: 85vh; /* Increased height */
+    box-sizing: border-box;
+    box-shadow: 0 0 10px rgba(0, 0, 0);
+    background-color: white; /* Background of the container */
+    overflow: hidden; /* Ensure content stays inside the box */
+}
+
+.login-left {
+    flex: 1.1; /* Increase width of the left section */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: flex-start; /* Align items to the left */
+    text-align: left;
+    background: url('images/signin.jpg') no-repeat center center; /* Background image */
+    background-size: cover; /* Ensure image covers the section without zooming in too much */
+    color: white;
+    padding: 40px;
+    position: relative;
+}
+
+.login-left .login-logo {
+    position: absolute;
+    top: 20px; /* Position from the top */
+    left: 20px; /* Position from the left */
+}
+
+.login-left .login-logo img {
+    max-width: 100px;
+}
+
+.login-left h1 {
+    font-size: 2.5em;
+    margin-top: 20px;
+}
+
+.login-right {
+    flex: 1; /* Decrease width of the right section */
+    background-color: white;
+    padding: 40px;
+    box-sizing: border-box; /* Ensure padding doesn't cause overflow */
+    margin-top: 30px;
+}
+
+.login-right form {
+    margin-top: 20px; /* Move the form down */
+}
+
+.login-form-group {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.login-form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.login-form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.login-form-group input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.login-form-group button {
+    width: 100%;
+    padding: 10px;
+    background-color: #5A67D8;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-form-group button:hover {
+    background-color: #4C51BF;
+}
+
+.remember-forget {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px; /* Add some space above */
+    margin: 20px 0;
+}
+
+.remember-me {
+    display: flex;
+    align-items: center;
+}
+
+.remember-me input {
+    margin-right: 5px;
+}
+
+.forget-password {
+    text-align: right; /* Align to the right */
+}
+
+.forget-password a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.forget-password a:hover {
+    text-decoration: underline;
+}
+
+.new-user {
+    margin-top: 40px; /* Move the "New User" section down */
+    color: #333;
+    text-align: left;
+}
+
+.new-user a {
+    color: #0056b3;
+    text-decoration: none;
+}
+
+.new-user a:hover {
+    text-decoration: underline;
+}
+
+/*------------------------------------------------------------*/
+
+body.engine-page {
+    font-family: 'Cormorant Garamond', serif;
+    margin: 0;
+    padding: 0; /* We will position elements individually */
+    background-color: #5d5d69;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevents scrolling */
+}
+
+h1.heading1 {
+    position: absolute; /* Allows precise positioning */
+    top: 40px; /* Adds space from the top */
+    left: 135px; /* Adds space from the left */
+    font-size: 55px;
+    font-weight: bold;
+    margin: 0; /* Removes default margins */
+    color: white;
+}
+
+p.description1 {
+    position: absolute; /* Aligns near h1 */
+    top: 100px; /* Positions p below h1 with extra spacing */
+    left: 135px; /* Matches the left alignment with h1 */
+    font-size: 25px;
+    margin: 0; /* Removes default margins */
+    max-width: 900px; /* Limits the width of subheading */
+    text-align: left;
+    color: white;
+}
+
+.articles1 {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px; /* Adjusts space between the boxes */
+    position: absolute; /* Allows positioning relative to the page */
+    top: 35%; /* Moves the boxes upwards, adjust percentage as needed */
+    left: 5%; /* Moves the boxes slightly to the left */
+    padding-left: 55px;
+}
+
+.article1 {
+    flex: 1; /* Ensures all boxes are the same width */
+    max-width: 350px; /* Optional: Limits the size of the boxes */
+    height: 400px;
+    border-radius: 8px; /* Gives the boxes rounded corners */
+    background-color: #777783; /* Adds a subtle background color */
+    text-align: center; /* Centers the content in each box */
+    transition: transform 0.2s, box-shadow 0.2s; /* Adds a hover effect */
+}
+.article1:hover {
+    transform: translateY(-5px); /* Moves the box slightly up on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Darkens the shadow on hover */
+}
+
+.article1 img {
+    border-radius: 5px;
+    margin-bottom: 0px;
+    width: 100%; /* Ensures the image spans the full width of the box */
+    height: 200px; /* Adjust the height to match the top part of the box */
+    object-fit: cover; /* Makes the image fit neatly without distortion */
+    border-radius: 8px 8px 0 0; /* Keeps the top corners rounded */
+}
+
+.article1 a {
+    font-size: 28px;
+    color: #fffafa;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    max-width: 300px;
+    padding: 8px;
+}
+
+
+/*------------------------------------------------------------*/
+
+body.brakes-page {
+    font-family: 'Cormorant Garamond', serif;
+    margin: 0;
+    padding: 20px; /* Adds overall spacing to the page */
+    background-color: #5d5d69;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevents scrolling */
+}
+
+h1.heading2 {
+    position: absolute; /* Allows precise positioning */
+    top: 40px; /* Adds space from the top */
+    left: 135px; /* Adds space from the left */
+    font-size: 55px;
+    font-weight: bold;
+    margin: 0; /* Removes default margins */
+    color: white;
+}
+
+p.description2 {
+    position: absolute; /* Aligns near h1 */
+    top: 100px; /* Positions p below h1 with extra spacing */
+    left: 135px; /* Matches the left alignment with h1 */
+    font-size: 25px;
+    margin: 0; /* Removes default margins */
+    max-width: 900px; /* Limits the width of subheading */
+    text-align: left;
+    color: white;
+}
+
+.articles2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px; /* Adjusts space between the boxes */
+    position: absolute; /* Allows positioning relative to the page */
+    top: 35%; /* Moves the boxes upwards, adjust percentage as needed */
+    left: 5%; /* Moves the boxes slightly to the left */
+    padding-left: 55px;
+}
+
+.article2 {
+    flex: 1; /* Ensures all boxes are the same width */
+    max-width: 350px; /* Optional: Limits the size of the boxes */
+    height: 400px;
+    border-radius: 8px; /* Gives the boxes rounded corners */
+    background-color: #777783; /* Adds a subtle background color */
+    text-align: center; /* Centers the content in each box */
+    transition: transform 0.2s, box-shadow 0.2s; /* Adds a hover effect */
+}
+.article2:hover {
+    transform: translateY(-5px); /* Moves the box slightly up on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Darkens the shadow on hover */
+}
+
+.article2 img {
+    border-radius: 5px;
+    margin-bottom: 0px;
+    width: 100%; /* Ensures the image spans the full width of the box */
+    height: 200px; /* Adjust the height to match the top part of the box */
+    object-fit: cover; /* Makes the image fit neatly without distortion */
+    border-radius: 8px 8px 0 0; /* Keeps the top corners rounded */
+}
+
+.article2 a {
+    font-size: 28px;
+    color: #fffafa;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    max-width: 300px;
+    padding: 8px;
+}
+
+/*------------------------------------------------------------*/
+
+body.battery-page {
+    font-family: 'Cormorant Garamond', serif;
+    margin: 0;
+    padding: 20px; /* Adds overall spacing to the page */
+    background-color: #5d5d69;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevents scrolling */
+}
+
+h1.heading3 {
+    position: absolute; /* Allows precise positioning */
+    top: 40px; /* Adds space from the top */
+    left: 135px; /* Adds space from the left */
+    font-size: 55px;
+    font-weight: bold;
+    margin: 0; /* Removes default margins */
+    color: white;
+}
+
+p.description3 {
+    position: absolute; /* Aligns near h1 */
+    top: 100px; /* Positions p below h1 with extra spacing */
+    left: 135px; /* Matches the left alignment with h1 */
+    font-size: 25px;
+    margin: 0; /* Removes default margins */
+    max-width: 900px; /* Limits the width of subheading */
+    text-align: left;
+    color: white;
+}
+
+.articles3 {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px; /* Adjusts space between the boxes */
+    position: absolute; /* Allows positioning relative to the page */
+    top: 35%; /* Moves the boxes upwards, adjust percentage as needed */
+    left: 5%; /* Moves the boxes slightly to the left */
+    padding-left: 55px;
+}
+
+.article3 {
+    flex: 1; /* Ensures all boxes are the same width */
+    max-width: 350px; /* Optional: Limits the size of the boxes */
+    height: 400px;
+    border-radius: 8px; /* Gives the boxes rounded corners */
+    background-color: #777783; /* Adds a subtle background color */
+    text-align: center; /* Centers the content in each box */
+    transition: transform 0.2s, box-shadow 0.2s; /* Adds a hover effect */
+}
+.article3:hover {
+    transform: translateY(-5px); /* Moves the box slightly up on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Darkens the shadow on hover */
+}
+
+.article3 img {
+    border-radius: 5px;
+    margin-bottom: 0px;
+    width: 100%; /* Ensures the image spans the full width of the box */
+    height: 200px; /* Adjust the height to match the top part of the box */
+    object-fit: cover; /* Makes the image fit neatly without distortion */
+    border-radius: 8px 8px 0 0; /* Keeps the top corners rounded */
+}
+
+.article3 a {
+    font-size: 28px;
+    color: #fffafa;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    max-width: 300px;
+    padding: 8px;
+}
+
+/*------------------------------------------------------------*/
+
+body.fluid-page {
+    font-family: 'Cormorant Garamond', serif;
+    margin: 0;
+    padding: 20px; /* Adds overall spacing to the page */
+    background-color: #5d5d69;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevents scrolling */
+}
+
+h1.heading4 {
+    position: absolute; /* Allows precise positioning */
+    top: 40px; /* Adds space from the top */
+    left: 135px; /* Adds space from the left */
+    font-size: 55px;
+    font-weight: bold;
+    margin: 0; /* Removes default margins */
+    color: white;
+}
+
+p.description4 {
+    position: absolute; /* Aligns near h1 */
+    top: 100px; /* Positions p below h1 with extra spacing */
+    left: 135px; /* Matches the left alignment with h1 */
+    font-size: 25px;
+    margin: 0; /* Removes default margins */
+    max-width: 900px; /* Limits the width of subheading */
+    text-align: left;
+    color: white;
+}
+
+.articles4 {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px; /* Adjusts space between the boxes */
+    position: absolute; /* Allows positioning relative to the page */
+    top: 35%; /* Moves the boxes upwards, adjust percentage as needed */
+    left: 5%; /* Moves the boxes slightly to the left */
+    padding-left: 55px;
+}
+
+.article4 {
+    flex: 1; /* Ensures all boxes are the same width */
+    max-width: 350px; /* Optional: Limits the size of the boxes */
+    height: 400px;
+    border-radius: 8px; /* Gives the boxes rounded corners */
+    background-color: #777783; /* Adds a subtle background color */
+    text-align: center; /* Centers the content in each box */
+    transition: transform 0.2s, box-shadow 0.2s; /* Adds a hover effect */
+}
+.article4:hover {
+    transform: translateY(-5px); /* Moves the box slightly up on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Darkens the shadow on hover */
+}
+
+.article4 img {
+    border-radius: 5px;
+    margin-bottom: 0px;
+    width: 100%; /* Ensures the image spans the full width of the box */
+    height: 200px; /* Adjust the height to match the top part of the box */
+    object-fit: cover; /* Makes the image fit neatly without distortion */
+    border-radius: 8px 8px 0 0; /* Keeps the top corners rounded */
+}
+
+.article4 a {
+    font-size: 28px;
+    color: #fffafa;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    max-width: 300px;
+    padding: 8px;
+}
+
+/*------------------------------------------------------------*/
+
+body.alternator-page {
+    font-family: 'Cormorant Garamond', serif;
+    margin: 0;
+    padding: 20px; /* Adds overall spacing to the page */
+    background-color: #5d5d69;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevents scrolling */
+}
+
+h1.heading5 {
+    position: absolute; /* Allows precise positioning */
+    top: 40px; /* Adds space from the top */
+    left: 135px; /* Adds space from the left */
+    font-size: 55px;
+    font-weight: bold;
+    margin: 0; /* Removes default margins */
+    color: white;
+}
+
+p.description5 {
+    position: absolute; /* Aligns near h1 */
+    top: 100px; /* Positions p below h1 with extra spacing */
+    left: 135px; /* Matches the left alignment with h1 */
+    font-size: 25px;
+    margin: 0; /* Removes default margins */
+    max-width: 900px; /* Limits the width of subheading */
+    text-align: left;
+    color: white;
+}
+
+.articles5 {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px; /* Adjusts space between the boxes */
+    position: absolute; /* Allows positioning relative to the page */
+    top: 35%; /* Moves the boxes upwards, adjust percentage as needed */
+    left: 5%; /* Moves the boxes slightly to the left */
+    padding-left: 55px;
+}
+
+.article5 {
+    flex: 1; /* Ensures all boxes are the same width */
+    max-width: 350px; /* Optional: Limits the size of the boxes */
+    height: 400px;
+    border-radius: 8px; /* Gives the boxes rounded corners */
+    background-color: #777783; /* Adds a subtle background color */
+    text-align: center; /* Centers the content in each box */
+    transition: transform 0.2s, box-shadow 0.2s; /* Adds a hover effect */
+}
+.article5:hover {
+    transform: translateY(-5px); /* Moves the box slightly up on hover */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Darkens the shadow on hover */
+}
+
+.article5 img {
+    border-radius: 5px;
+    margin-bottom: 0px;
+    width: 100%; /* Ensures the image spans the full width of the box */
+    height: 200px; /* Adjust the height to match the top part of the box */
+    object-fit: cover; /* Makes the image fit neatly without distortion */
+    border-radius: 8px 8px 0 0; /* Keeps the top corners rounded */
+}
+
+.article5 a {
+    font-size: 28px;
+    color: #fffafa;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    max-width: 300px;
+    padding: 8px;
+}
+
+
+/*------------------------------------------------------------*/
+
+body.quiz2-page {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    background: url('images/quiz1.jpg') no-repeat center center fixed; ;
+    background-size: cover;
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+  }
+  
+  .quiz-container {
+    background-color: rgba(0, 0, 0, 0);
+    padding: 50px;
+    border: 2px solid white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 800px;
+    height:450px;
+  }
+  
+  .quiz-container h2 {
+    font-size: 2.1em;
+    margin-bottom: 10px;
+    font-family: Playfair, Display;
+  }
+
+  .btn {
+    font-weight: 500;
+    width: 80%; /* Ensures the button spans the container width */
+    padding: 15px;
+    margin: 10px auto; /* Adds spacing between buttons vertically */
+    text-align: left; /* Keeps the text aligned to the left */
+    border-radius: 4px;
+    cursor: pointer;
+    display: block; /* Makes the buttons stack vertically */
+    font-size: 1.2em; /* Adjust font size as needed */
+    font-family: 'Syne', sans-serif; 
+  }
+  
+
+  .b{
+    margin-top: 50px;
+    
+  }
+
+  .btn:hover{
+    background-color: #5b5858;
+  }
+
+  .next{
+    margin-top: 30px;
+  }
+  
+  
+  #next-btn {
+    color: white;
+    border: none;
+    padding: 15px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block; /* Makes it act as a block-level element */
+    margin: 20px auto; /* Centers horizontally within its parent */
+  }
+  
+  #next-btn:hover {
+    background-color: #5b5858;
+  }
+
+  .correct{
+    background-color: #64ab82;
+  }
+  .incorrect{
+    background-color: #a14f4f;
+  }
+
+  /*------------------------------------------------------------*/
+
+  body.feedback-page{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Playfair Display', serif;
+    background: url('images/tui.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+  }
+  
+  .feedback-display-section h2 {
+    display: none;
+  }
+
+  .feedback-container {
+    background-color: rgba(129, 107, 225, 0.371);
+    padding: 40px;
+    border-radius: 10px;
+    width: 800;
+    text-align: center;
+    max-width: 90%;
+    margin-top: 20px;
+  }
+  
+  .title {
+    font-family: 'Syne', sans-serif;
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  label {
+    font-size: 1em;
+    font-family: 'Playfair Display', serif;
+    color: white;
+  }
+  
+  input, textarea, button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 7px;
+    border: 1px solid #6f6969;
+  }
+
+  
+  button {
+    background-color: #5b5858;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #333;
+  }
+  
+  
+  .thank-you-message {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.5em;
+    color: #ffffff;
+  }
+  
+  .stars {
+    display: flex;
+    font-size: 2rem;
+    cursor: pointer;
+    justify-content: center;
+    margin: 10px 0;
+}
+.star {
+    color: lightgray;
+}
+.star:hover {
+    color: gold;
+}
+
+.feedback-display-section {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 90%;
+    color: white;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .feedback-display-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  #feedback-list {
+    list-style: none;
+    padding: 0;
+    max-height: 300px; /* Limit the height for better usability */
+    overflow-y: auto; /* Adds a scroll for overflow */
+  }
+  
+  #feedback-list li {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgba(129, 107, 225, 0.5);
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+
+/*-------------------------------------*/
+
+body.categories-page {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding: 0;
+    background: url('images/categories.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+
+  }
+  
+  .categories-container {
+    padding: 20px;
+    margin-top: 40px;
+    font-family: 'Playfair Display', serif;
+    height: 100vh;
+  }
+  
+  .categories-header {
+    text-align: left;
+    margin-left: 20px;
+  }
+  
+  .categories-header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-family: 'Syne', sans-serif;
+    color: #000;
+  }
+  
+  .categories-header h2 {
+    font-size: 1.2em;
+    margin: 5px 0 20px;
+    font-weight: 400;
+    color: #000;
+  }
+  
+  .categories-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px; /* Increased gap slightly for balance */
+    padding: 20px;
+  }
+  
+  .category-box {
+    background: rgba(0, 0, 0, 0.8); /* Solid color for clean look */
+    width: 400px; /* Increased width */
+    height: 200px; /* Increased height for bigger boxes */
+    text-align: center;
+    border: 2px solid white; /* Adds border for aesthetic touch */
+    border-radius: 5px; /* Slight rounding */
+    font-family: 'Syne', sans-serif;
+    font-size: 1.5em; /* Slightly bigger font for larger boxes */
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s, background-color 0.3s;
+    text-decoration: none; /* Removes link underline */
+    color: white; /* White text for contrast */
+  }
+  
+  .category-box:hover {
+    transform: scale(1.05); /* Grow slightly on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Lighten box on hover */
+    cursor: pointer;
+  }
+  
+  /*-----------------------------------------*/
+
+body.DIY-page {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    padding: 0;
+    background: url('images/categories.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+}
+
+.DIY-container {
+    padding: 20px;
+    margin-top: 40px;
+    font-family: 'Playfair Display', serif;
+    min-height: 100vh;
+}
+
+.DIY-header {
+    text-align: left;
+    margin-left: 20px;
+}
+
+.DIY-header h1 {
+    font-size: 3em;
+    margin: 0;
+    font-family: 'Syne', sans-serif;
+    color: #000;
+}
+
+.DIY-header h2 {
+    font-size: 1.5em;
+    margin: 5px 0 20px;
+    font-weight: 400;
+    color: #000;
+}
+
+.DIY-articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 25px; /* Adjusts spacing between the boxes */
+    padding: 20px;
+    margin-top: 50px; /* Adjust the vertical positioning if needed */
+}
+
+.DIYarticle {
+    background: rgba(243, 240, 240, 0.8); /* Solid color for clean look */
+    text-align: center;
+    border-radius: 15px; /* Rounded corners */
+    font-family: 'Syne', sans-serif;
+    font-size: 1.5em;
+    font-weight: bold;
+    transition: transform 0.3s, background-color 0.3s;
+    text-decoration: none;
+    color: white;
+    max-width: 400px; /* Increased width */
+    height: 350px; /* Increased height */
+    display: flex;
+    flex-direction: column; /* Stacks the image and text vertically */
+    overflow: hidden; /* Ensures content doesn't overflow outside the box */
+}
+
+.DIYarticle:hover {
+    transform: translateY(-5px); /* Adds hover effect */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Darker shadow on hover */
+    cursor: pointer;
+}
+
+.DIYarticle img {
+    border-radius: 8px 8px 0 0; /* Keeps the top corners rounded */
+    width: 100%; /* Makes the image span the full width of the box */
+    height: 250px; /* Increased height for the image */
+    object-fit: cover; /* Ensures the image is cropped neatly without distortion */
+}
+
+.DIYarticle a {
+    font-size: 20px; /* Adjust font size for better fit */
+    color: #0a0a0a;
+    font-size: 25px;
+    text-decoration: none;
+    font-family: Montserrat;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1); /* Slight background for text section */
+}
+  
+/*-----------------------------------------*/
+
